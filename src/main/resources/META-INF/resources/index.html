@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Login Moderno</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+<body onload="app.initLogin()" class="gradient-bg min-h-screen flex items-center justify-center p-6">
+    <div class="glass-effect w-full max-w-md p-8 rounded-2xl shadow-2xl">
+        <div class="text-center">
+            <div class="inline-block p-4 rounded-full bg-white/10 mb-4">
+                <img src="/api/placeholder/40/40" alt="Logo" class="h-10 w-10" />
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-2">Bienvenido</h2>
+            <p class="text-gray-200 mb-8">Inicia sesión para continuar</p>
+        </div>
+
+        <form id="loginform" onsubmit="app.login()" class="space-y-6">
+            <div>
+                <div class="relative">
+                    <input id="username" 
+                           name="username" 
+                           type="text" 
+                           required 
+                           class="w-full px-4 py-3 bg-white/10 border border-gray-200/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
+                           placeholder="Usuario" />
+                </div>
+            </div>
+
+            <div>
+                <div class="relative">
+                    <input id="password" 
+                           name="password" 
+                           type="password" 
+                           required 
+                           class="w-full px-4 py-3 bg-white/10 border border-gray-200/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
+                           placeholder="Contraseña" />
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between text-sm">
+                <label class="flex items-center text-gray-200">
+                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500">
+                    <span class="ml-2">Recordarme</span>
+                </label>
+                <a href="#" class="text-purple-300 hover:text-purple-200">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button type="submit" 
+                    class="w-full py-3 px-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition duration-200 transform hover:scale-[1.02]">
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <p class="mt-8 text-center text-gray-200">
+            ¿No tienes una cuenta? 
+            <a href="#" class="text-purple-300 hover:text-purple-200 font-medium">Regístrate</a>
+        </p>
+    </div>
+</body>
+</html>
