@@ -61,16 +61,6 @@ Las funciones sin servidor de la aplicación se activan cuando los usuarios real
 
 ![arquitectura-taller-8](https://github.com/ELS4NTA/AREP/assets/99996670/a8ecac8c-321e-4619-a093-653b804bf028)
 
-## Despliegue
-
-En el siguiente video se muestra el despliegue de la aplicación en AWS:
-
-- Se puede observar la base de datos MongoDB en la máquina virtual en EC2.
-- Se muestran las pruebas de las funciones lambda junto con el correcto almacenamiento de los datos en la base de datos. Las funciones lambda son: `stream-post` la cual almacena un nuevo dato en la base de datos y `stream-get` la cual obtiene todos los datos almacenados en la base de datos.
-- Estas funciones son invocadas por el API Gateway, el cual se encarga de enrutar las solicitudes de los usuarios a los componentes adecuados de la aplicación.
-- Finalmente, se muestra la autenticación de los usuarios en la aplicación mediante Amazon Cognito, en caso de que se quiera acceder directamente a la aplicación sin autenticación, se redirige a la página de login.
-
-[AREP-LAB-08.webm](https://github.com/ELS4NTA/AREP/assets/99996670/de6d04aa-1550-4b4e-8ab1-b03d7a3bac71)
 
 ## Versionado
 
